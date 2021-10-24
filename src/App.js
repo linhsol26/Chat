@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 import React, { useEffect, useRef, useState } from 'react';
@@ -12,12 +11,14 @@ import { useCollectionData } from 'react-firebase-hooks/firestore'
 
 // firebase config
 firebase.initializeApp({
-  apiKey: "AIzaSyDPJBnRSj8iuDh9kqgNk20nu2AJ6RgOmro",
-  authDomain: "chat-c84a6.firebaseapp.com",
-  projectId: "chat-c84a6",
-  storageBucket: "chat-c84a6.appspot.com",
-  messagingSenderId: "933924540988",
-  appId: "1:933924540988:web:bbfbdd0e44f4317c16e939"
+  apiKey: "AIzaSyC9IxSJWFF38NinS0lDj2FviMN9u5rA0Ao",
+    authDomain: "demoweb-4d9ea.firebaseapp.com",
+    projectId: "demoweb-4d9ea",
+    storageBucket: "demoweb-4d9ea.appspot.com",
+    messagingSenderId: "868770683928",
+    appId: "1:868770683928:web:cc6589dfdf5dd4a153776d",
+    measurementId: "G-T3E1XNTLPX"
+
 })
 
 const auth = firebase.auth()
@@ -122,6 +123,7 @@ function ChatRoom() {
 
   return (
     <div className="w-1/2 h-4/5 mt-1 border  m-auto">
+      <br/>
       <div className="border-t-2 border-gray-200 px-4 pt-4 mb-2 sm:mb-0">
         <div>
           {/* call ChatMessage Component for each new message */}
@@ -145,6 +147,7 @@ function ChatRoom() {
             </button>
         </form>
       </div>
+      <br/>
     </div>
   </div>
   )
@@ -159,7 +162,7 @@ function ChatMessage(props) {
           <img src={photoURL || 'https://i.imgur.com/rFbS5ms.png'} alt="{user}'s pfp" className="rounded-full w-8 h-8" />
         </div>
         <div className="flex flex-col mt-8 space-y-2 text-xs max-w-xs mx-2 order-2 items-start">
-          {/* <p>{user}</p> */}
+          <p>{user}</p>
           <p className="px-4 py-2 rounded-lg inline-block bg-gray-300 text-gray-600">{body}</p>
         </div>
       </div>
